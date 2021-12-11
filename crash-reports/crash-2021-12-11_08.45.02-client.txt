@@ -1,0 +1,79 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 11.12.21 08:45
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: 2
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:388)
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:397)
+	at sus.SusClient.keyPress(SusClient.java:71)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2006)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1866)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1142)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:452)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:388)
+	at java.util.concurrent.CopyOnWriteArrayList.get(CopyOnWriteArrayList.java:397)
+	at sus.SusClient.keyPress(SusClient.java:71)
+	at net.minecraft.client.Minecraft.runTickKeyboard(Minecraft.java:2006)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player840'/126, l='MpServer', x=-248,63, y=4,00, z=-356,23]]
+	Chunk stats: MultiplayerChunkCache: 600, 600
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-398,4,-329), Chunk: (at 2,0,7 in -25,-21; contains blocks -400,0,-336 to -385,255,-321), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 8694 game time, 8694 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 65 total; [EntitySlime['Slime'/129, l='MpServer', x=-173,28, y=4,00, z=-316,88], EntitySlime['Slime'/59, l='MpServer', x=-325,19, y=4,00, z=-414,04], EntitySlime['Slime'/60, l='MpServer', x=-327,44, y=4,00, z=-390,80], EntitySlime['Slime'/61, l='MpServer', x=-326,01, y=4,00, z=-385,68], EntitySlime['Slime'/62, l='MpServer', x=-327,20, y=4,00, z=-382,60], EntitySlime['Slime'/63, l='MpServer', x=-320,96, y=4,00, z=-364,72], EntitySlime['Slime'/64, l='MpServer', x=-308,36, y=4,00, z=-406,06], EntitySlime['Slime'/65, l='MpServer', x=-316,19, y=4,00, z=-386,88], EntitySlime['Slime'/66, l='MpServer', x=-307,57, y=4,00, z=-397,00], EntitySlime['Slime'/67, l='MpServer', x=-313,78, y=4,28, z=-393,81], EntitySlime['Slime'/68, l='MpServer', x=-318,60, y=4,00, z=-397,51], EntitySlime['Slime'/69, l='MpServer', x=-309,33, y=4,00, z=-393,25], EntitySlime['Slime'/70, l='MpServer', x=-304,28, y=4,00, z=-400,58], EntitySlime['Slime'/71, l='MpServer', x=-319,05, y=4,00, z=-399,58], EntitySlime['Slime'/72, l='MpServer', x=-309,42, y=4,75, z=-378,38], EntitySlime['Slime'/73, l='MpServer', x=-308,66, y=4,00, z=-380,99], EntitySlime['Slime'/74, l='MpServer', x=-307,32, y=4,00, z=-381,27], EntitySlime['Slime'/75, l='MpServer', x=-306,12, y=4,00, z=-374,08], EntitySlime['Slime'/76, l='MpServer', x=-303,63, y=4,00, z=-361,13], EntitySlime['Slime'/77, l='MpServer', x=-317,41, y=4,00, z=-367,49], EntitySlime['Slime'/80, l='MpServer', x=-300,34, y=4,14, z=-406,88], EntitySlime['Slime'/81, l='MpServer', x=-299,23, y=4,42, z=-401,44], EntitySlime['Slime'/82, l='MpServer', x=-299,53, y=4,00, z=-392,99], EntitySlime['Slime'/83, l='MpServer', x=-294,70, y=2,42, z=-383,18], EntitySlime['Slime'/84, l='MpServer', x=-299,53, y=4,28, z=-360,83], EntitySlime['Slime'/85, l='MpServer', x=-298,05, y=4,75, z=-361,83], EntitySlime['Slime'/86, l='MpServer', x=-274,66, y=4,75, z=-414,79], EntitySlime['Slime'/87, l='MpServer', x=-273,88, y=4,00, z=-400,45], EntitySlime['Slime'/88, l='MpServer', x=-273,58, y=4,42, z=-392,24], EntitySlime['Slime'/89, l='MpServer', x=-277,65, y=4,00, z=-369,82], EntitySlime['Slime'/90, l='MpServer', x=-281,44, y=4,28, z=-384,47], EntitySlime['Slime'/91, l='MpServer', x=-286,50, y=4,00, z=-372,57], EntitySlime['Slime'/92, l='MpServer', x=-283,97, y=4,00, z=-373,54], EntitySlime['Slime'/93, l='MpServer', x=-288,76, y=4,00, z=-370,22], EntitySlime['Slime'/94, l='MpServer', x=-279,32, y=4,00, z=-368,43], EntitySlime['Slime'/95, l='MpServer', x=-271,90, y=4,00, z=-366,19], EntitySlime['Slime'/96, l='MpServer', x=-284,83, y=4,00, z=-310,80], EntitySlime['Slime'/97, l='MpServer', x=-274,37, y=4,00, z=-310,90], EntitySlime['Slime'/98, l='MpServer', x=-262,05, y=4,14, z=-391,74], EntityPlayerSP['Player840'/126, l='MpServer', x=-248,63, y=4,00, z=-356,23], EntitySlime['Slime'/99, l='MpServer', x=-269,24, y=4,00, z=-387,12], EntitySlime['Slime'/100, l='MpServer', x=-271,31, y=4,00, z=-376,51], EntitySlime['Slime'/101, l='MpServer', x=-268,84, y=4,75, z=-378,14], EntitySlime['Slime'/102, l='MpServer', x=-271,13, y=4,00, z=-368,58], EntitySlime['Slime'/103, l='MpServer', x=-269,37, y=4,14, z=-376,35], EntitySlime['Slime'/104, l='MpServer', x=-264,76, y=4,00, z=-322,21], EntitySlime['Slime'/105, l='MpServer', x=-270,27, y=4,28, z=-299,08], EntitySlime['Slime'/106, l='MpServer', x=-249,94, y=4,00, z=-424,18], EntitySlime['Slime'/107, l='MpServer', x=-244,79, y=4,00, z=-411,83], EntitySlime['Slime'/108, l='MpServer', x=-244,92, y=4,00, z=-403,04], EntitySlime['Slime'/109, l='MpServer', x=-247,55, y=4,00, z=-403,19], EntitySlime['Slime'/110, l='MpServer', x=-245,62, y=4,00, z=-370,30], EntitySlime['Slime'/111, l='MpServer', x=-252,11, y=4,00, z=-358,93], EntitySlime['Slime'/112, l='MpServer', x=-255,26, y=4,00, z=-360,81], EntitySlime['Slime'/113, l='MpServer', x=-246,66, y=4,00, z=-356,52], EntitySlime['Slime'/114, l='MpServer', x=-244,50, y=4,00, z=-364,65], EntitySlime['Slime'/116, l='MpServer', x=-236,96, y=4,00, z=-433,58], EntitySlime['Slime'/117, l='MpServer', x=-227,25, y=4,00, z=-432,76], EntityXPOrb['Experience Orb'/118, l='MpServer', x=-239,35, y=4,00, z=-401,64], EntitySlime['Slime'/119, l='MpServer', x=-233,45, y=4,00, z=-415,37], EntitySlime['Slime'/120, l='MpServer', x=-227,81, y=4,00, z=-394,77], EntitySlime['Slime'/121, l='MpServer', x=-223,46, y=4,00, z=-306,96], EntitySlime['Slime'/124, l='MpServer', x=-219,09, y=4,00, z=-399,29], EntitySlime['Slime'/125, l='MpServer', x=-202,74, y=4,00, z=-344,50], EntitySlime['Slime'/127, l='MpServer', x=-191,56, y=4,00, z=-305,01]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:448)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2923)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:481)
+	at net.minecraft.client.main.Main.main(Main.java:115)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_312, Amazon.com Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Amazon.com Inc.
+	Memory: 185867288 bytes (177 MB) / 517472256 bytes (493 MB) up to 3790077952 bytes (3614 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: GeForce GTX 1050/PCIe/SSE2 GL version 4.6.0 NVIDIA 457.49, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-8300H CPU @ 2.30GHz
